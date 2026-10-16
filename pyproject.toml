@@ -1,0 +1,20 @@
+[project]
+name = "tokenization-text-to-numbers"
+version = "0.1.0"
+description = "Teaching repo: how a tokenizer turns text into the numbers a language model reads, from a hand-built BPE to three production tokenizers"
+requires-python = ">=3.12"
+dependencies = [
+    "tiktoken>=0.9.0",
+    "tokenizers>=0.21.0",
+    "sentencepiece>=0.2.0",
+    "matplotlib>=3.9.0",
+    "ipykernel>=7.3.0",
+    "jupyter>=1.1.1",
+    "notebook>=7.6.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.0",
+    "nbconvert>=7.16.0",
+]
