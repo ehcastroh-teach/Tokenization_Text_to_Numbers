@@ -61,3 +61,15 @@ Open `orientation.ipynb` first. Its second Part checks that your environment is 
 ## Credits and Acknowledgements
 
 Authors: Sennrich, Haddow and Birch for the subword-units paper that brought BPE to language models; Gage for the original compression algorithm; Kudo and Richardson for SentencePiece; Radford et al. for byte-level BPE in GPT-2. Libraries: tiktoken, Hugging Face `tokenizers`, SentencePiece and matplotlib.
+
+---
+
+## Contact
+
+<div align="center">
+  <img src="images/thumbnails/ehcastroh_teach_banner_flower.png" alt="ehcastroh" width="90" style="border-radius: 50%;" />
+
+  <sub>ehcastroh</sub>
+
+  <a href="https://github.com/ehcastroh">GitHub</a> · <a href="https://www.linkedin.com/in/ehcastroh/">LinkedIn</a>
+</div>
