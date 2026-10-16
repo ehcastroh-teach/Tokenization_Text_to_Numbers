@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" font-family="'SF Pro Text', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <rect width="900" height="640" fill="#FAFAF9"/>
+  <text x="450" y="40" font-size="22" fill="#1A1A1A" font-weight="600" text-anchor="middle">The BPE training loop</text>
+  <text x="450" y="62" font-size="13" fill="#6B7280" text-anchor="middle">Count pairs, merge the most frequent one, record it, repeat</text>
+  <g>
+    <rect x="60" y="96" width="130" height="96" rx="10" fill="#FFFFFF" stroke="#2D3748" stroke-width="1.5"/>
+    <rect x="60" y="96" width="6" height="96" rx="3" fill="#2D3748"/>
+    <circle cx="88" cy="122" r="11" fill="#2D3748"/>
+    <text x="88" y="126" font-size="12" fill="#FFFFFF" font-weight="600" text-anchor="middle">1</text>
+    <text x="106" y="127" font-size="14" fill="#2D3748" font-weight="600">Split</text>
+    <text x="80" y="154" font-size="11" fill="#374151">words into letters</text>
+    <text x="80" y="170" font-size="11" fill="#374151">plus a &lt;/w&gt; marker</text>
+  </g>
+  <line x1="192" y1="144" x2="208" y2="144" stroke="#9CA3AF" stroke-width="1.5"/><polygon points="218,144 208,139 208,149" fill="#9CA3AF"/>
+  <g>
+    <rect x="220" y="96" width="130" height="96" rx="10" fill="#FFFFFF" stroke="#4C51BF" stroke-width="1.5"/>
+    <rect x="220" y="96" width="6" height="96" rx="3" fill="#4C51BF"/>
+    <circle cx="248" cy="122" r="11" fill="#4C51BF"/>
+    <text x="248" y="126" font-size="12" fill="#FFFFFF" font-weight="600" text-anchor="middle">2</text>
+    <text x="266" y="127" font-size="14" fill="#4C51BF" font-weight="600">Count</text>
+    <text x="240" y="154" font-size="11" fill="#374151">adjacent pairs in</text>
+    <text x="240" y="170" font-size="11" fill="#374151">the whole corpus</text>
+  </g>
+  <line x1="352" y1="144" x2="368" y2="144" stroke="#9CA3AF" stroke-width="1.5"/><polygon points="378,144 368,139 368,149" fill="#9CA3AF"/>
+  <g>
+    <rect x="380" y="96" width="130" height="96" rx="10" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+    <rect x="380" y="96" width="6" height="96" rx="3" fill="#059669"/>
+    <circle cx="408" cy="122" r="11" fill="#059669"/>
+    <text x="408" y="126" font-size="12" fill="#FFFFFF" font-weight="600" text-anchor="middle">3</text>
+    <text x="426" y="127" font-size="14" fill="#059669" font-weight="600">Merge</text>
+    <text x="400" y="154" font-size="11" fill="#374151">most frequent pair</text>
+    <text x="400" y="170" font-size="11" fill="#374151">becomes one symbol</text>
+  </g>
+  <line x1="512" y1="144" x2="528" y2="144" stroke="#9CA3AF" stroke-width="1.5"/><polygon points="538,144 528,139 528,149" fill="#9CA3AF"/>
+  <g>
+    <rect x="540" y="96" width="130" height="96" rx="10" fill="#FFFFFF" stroke="#B45309" stroke-width="1.5"/>
+    <rect x="540" y="96" width="6" height="96" rx="3" fill="#B45309"/>
+    <circle cx="568" cy="122" r="11" fill="#B45309"/>
+    <text x="568" y="126" font-size="12" fill="#FFFFFF" font-weight="600" text-anchor="middle">4</text>
+    <text x="586" y="127" font-size="14" fill="#B45309" font-weight="600">Record</text>
+    <text x="560" y="154" font-size="11" fill="#374151">append the merge</text>
+    <text x="560" y="170" font-size="11" fill="#374151">to the merge table</text>
+  </g>
+  <line x1="672" y1="144" x2="688" y2="144" stroke="#9CA3AF" stroke-width="1.5"/><polygon points="698,144 688,139 688,149" fill="#9CA3AF"/>
+  <g>
+    <rect x="700" y="96" width="130" height="96" rx="10" fill="#FFFFFF" stroke="#4C51BF" stroke-width="1.5"/>
+    <rect x="700" y="96" width="6" height="96" rx="3" fill="#4C51BF"/>
+    <circle cx="728" cy="122" r="11" fill="#4C51BF"/>
+    <text x="728" y="126" font-size="12" fill="#FFFFFF" font-weight="600" text-anchor="middle">5</text>
+    <text x="746" y="127" font-size="14" fill="#4C51BF" font-weight="600">Repeat</text>
+    <text x="720" y="154" font-size="11" fill="#374151">back to step 2 with</text>
+    <text x="720" y="170" font-size="11" fill="#374151">the new symbols</text>
+  </g>
+  <text x="125" y="214" font-size="10" fill="#6B7280" text-anchor="middle" font-style="italic">once, at the start</text>
+  <polyline points="765,192 765,226 285,226 285,200" fill="none" stroke="#4C51BF" stroke-width="1.5"/>
+  <polygon points="285,193 280,203 290,203" fill="#4C51BF"/>
+  <text x="525" y="246" font-size="11" fill="#4C51BF" font-weight="600" text-anchor="middle">steps 2 to 5 repeat until the merge budget is spent</text>
+  <rect x="60" y="270" width="780" height="252" rx="10" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1" stroke-dasharray="5,4"/>
+  <text x="84" y="298" font-size="14" fill="#1A1A1A" font-weight="600">Worked example: the first two merges</text>
+  <text x="84" y="343" font-size="13" fill="#059669" font-weight="600">Merge 1</text>
+  <rect x="170" y="326" width="25" height="26" rx="6" fill="#FFFFFF" stroke="#2D3748" stroke-width="1"/><text x="182.5" y="343.2" font-size="12" fill="#2D3748" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">e</text>
+  <text x="205" y="344" font-size="14" fill="#6B7280" font-weight="600" text-anchor="middle">+</text>
+  <rect x="217" y="326" width="25" height="26" rx="6" fill="#FFFFFF" stroke="#2D3748" stroke-width="1"/><text x="229.5" y="343.2" font-size="12" fill="#2D3748" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">w</text>
+  <line x1="252" y1="339" x2="272" y2="339" stroke="#9CA3AF" stroke-width="1.5"/><polygon points="282,339 272,334 272,344" fill="#9CA3AF"/>
+  <rect x="292" y="326" width="32" height="26" rx="6" fill="#ECFDF5" stroke="#059669" stroke-width="1"/><text x="308.0" y="343.2" font-size="12" fill="#059669" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">ew</text>
+  <text x="470" y="343" font-size="12" fill="#374151">pair seen 13 times</text>
+  <text x="640" y="343" font-size="11" fill="#6B7280" font-style="italic">recorded as merge 1</text>
+  <text x="84" y="387" font-size="13" fill="#059669" font-weight="600">Merge 2</text>
+  <rect x="170" y="370" width="25" height="26" rx="6" fill="#FFFFFF" stroke="#2D3748" stroke-width="1"/><text x="182.5" y="387.2" font-size="12" fill="#2D3748" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">n</text>
+  <text x="205" y="388" font-size="14" fill="#6B7280" font-weight="600" text-anchor="middle">+</text>
+  <rect x="217" y="370" width="32" height="26" rx="6" fill="#FFFFFF" stroke="#2D3748" stroke-width="1"/><text x="233.0" y="387.2" font-size="12" fill="#2D3748" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">ew</text>
+  <line x1="259" y1="383" x2="279" y2="383" stroke="#9CA3AF" stroke-width="1.5"/><polygon points="289,383 279,378 279,388" fill="#9CA3AF"/>
+  <rect x="299" y="370" width="40" height="26" rx="6" fill="#ECFDF5" stroke="#059669" stroke-width="1"/><text x="319.0" y="387.2" font-size="12" fill="#059669" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">new</text>
+  <text x="470" y="387" font-size="12" fill="#374151">pair seen 13 times</text>
+  <text x="640" y="387" font-size="11" fill="#6B7280" font-style="italic">recorded as merge 2</text>
+  <line x1="84" y1="416" x2="816" y2="416" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="84" y="461" font-size="13" fill="#2D3748" font-weight="600">newest</text>
+  <text x="170" y="486" font-size="10" fill="#6B7280" font-style="italic">start</text>
+  <rect x="170" y="446" width="22" height="22" rx="5" fill="#FFFFFF" stroke="#2D3748" stroke-width="1"/><text x="181.0" y="460.85" font-size="11" fill="#2D3748" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">n</text>
+  <rect x="195" y="446" width="22" height="22" rx="5" fill="#FFFFFF" stroke="#2D3748" stroke-width="1"/><text x="206.0" y="460.85" font-size="11" fill="#2D3748" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">e</text>
+  <rect x="220" y="446" width="22" height="22" rx="5" fill="#FFFFFF" stroke="#2D3748" stroke-width="1"/><text x="231.0" y="460.85" font-size="11" fill="#2D3748" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">w</text>
+  <rect x="245" y="446" width="22" height="22" rx="5" fill="#FFFFFF" stroke="#2D3748" stroke-width="1"/><text x="256.0" y="460.85" font-size="11" fill="#2D3748" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">e</text>
+  <rect x="270" y="446" width="22" height="22" rx="5" fill="#FFFFFF" stroke="#2D3748" stroke-width="1"/><text x="281.0" y="460.85" font-size="11" fill="#2D3748" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">s</text>
+  <rect x="295" y="446" width="22" height="22" rx="5" fill="#FFFFFF" stroke="#2D3748" stroke-width="1"/><text x="306.0" y="460.85" font-size="11" fill="#2D3748" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">t</text>
+  <rect x="320" y="446" width="38" height="22" rx="5" fill="#FFFFFF" stroke="#2D3748" stroke-width="1"/><text x="339.0" y="460.85" font-size="11" fill="#2D3748" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">&lt;/w&gt;</text>
+  <line x1="369" y1="457" x2="383" y2="457" stroke="#9CA3AF" stroke-width="1.5"/><polygon points="393,457 383,452 383,462" fill="#9CA3AF"/>
+  <text x="405" y="486" font-size="10" fill="#6B7280" font-style="italic">after merge 1</text>
+  <rect x="405" y="446" width="22" height="22" rx="5" fill="#FFFFFF" stroke="#4C51BF" stroke-width="1"/><text x="416.0" y="460.85" font-size="11" fill="#4C51BF" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">n</text>
+  <rect x="430" y="446" width="25" height="22" rx="5" fill="#FFFFFF" stroke="#4C51BF" stroke-width="1"/><text x="442.5" y="460.85" font-size="11" fill="#4C51BF" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">ew</text>
+  <rect x="458" y="446" width="22" height="22" rx="5" fill="#FFFFFF" stroke="#4C51BF" stroke-width="1"/><text x="469.0" y="460.85" font-size="11" fill="#4C51BF" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">e</text>
+  <rect x="483" y="446" width="22" height="22" rx="5" fill="#FFFFFF" stroke="#4C51BF" stroke-width="1"/><text x="494.0" y="460.85" font-size="11" fill="#4C51BF" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">s</text>
+  <rect x="508" y="446" width="22" height="22" rx="5" fill="#FFFFFF" stroke="#4C51BF" stroke-width="1"/><text x="519.0" y="460.85" font-size="11" fill="#4C51BF" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">t</text>
+  <rect x="533" y="446" width="38" height="22" rx="5" fill="#FFFFFF" stroke="#4C51BF" stroke-width="1"/><text x="552.0" y="460.85" font-size="11" fill="#4C51BF" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">&lt;/w&gt;</text>
+  <line x1="582" y1="457" x2="596" y2="457" stroke="#9CA3AF" stroke-width="1.5"/><polygon points="606,457 596,452 596,462" fill="#9CA3AF"/>
+  <text x="618" y="486" font-size="10" fill="#6B7280" font-style="italic">after merge 2</text>
+  <rect x="618" y="446" width="32" height="22" rx="5" fill="#ECFDF5" stroke="#059669" stroke-width="1"/><text x="634.0" y="460.85" font-size="11" fill="#059669" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">new</text>
+  <rect x="653" y="446" width="22" height="22" rx="5" fill="#ECFDF5" stroke="#059669" stroke-width="1"/><text x="664.0" y="460.85" font-size="11" fill="#059669" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">e</text>
+  <rect x="678" y="446" width="22" height="22" rx="5" fill="#ECFDF5" stroke="#059669" stroke-width="1"/><text x="689.0" y="460.85" font-size="11" fill="#059669" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">s</text>
+  <rect x="703" y="446" width="22" height="22" rx="5" fill="#ECFDF5" stroke="#059669" stroke-width="1"/><text x="714.0" y="460.85" font-size="11" fill="#059669" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">t</text>
+  <rect x="728" y="446" width="38" height="22" rx="5" fill="#ECFDF5" stroke="#059669" stroke-width="1"/><text x="747.0" y="460.85" font-size="11" fill="#059669" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">&lt;/w&gt;</text>
+  <rect x="60" y="540" width="780" height="72" rx="8" fill="#FFF7ED" stroke="#F59E0B" stroke-width="1"/>
+  <text x="80" y="564" font-size="12" fill="#92400E" font-weight="600">Key insight:</text>
+  <text x="80" y="584" font-size="11" fill="#78350F">Each merge changes the symbols the next count sees.</text>
+  <text x="80" y="600" font-size="11" fill="#78350F">Merge 2 only exists because merge 1 happened: 'ew' had to become one symbol before 'n' could join it.</text>
+
+</svg>

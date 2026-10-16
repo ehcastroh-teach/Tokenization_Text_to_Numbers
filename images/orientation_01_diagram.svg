@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'SF Pro Text', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <rect width="960" height="560" fill="#FAFAF9"/>
+  <rect x="40" y="28" width="6" height="34" fill="#F59E0B"/>
+  <text x="58" y="46" font-size="22" fill="#1A1A1A" font-weight="600">Coverage map: two notebooks</text>
+  <text x="58" y="66" font-size="13" fill="#6B7280">From a hand-built encoder to three production tokenizers</text>
+  <rect x="10" y="90" width="940" height="440" rx="14" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <rect x="405.0" y="78" width="150" height="24" rx="6" fill="#1A1A1A"/>
+  <text x="480.0" y="95" font-size="12" fill="#FFFFFF" font-weight="600" text-anchor="middle">Coverage Map</text>
+  <rect x="380" y="130" width="200" height="120" rx="12" fill="#2D3748" fill-opacity="0.08" stroke="#2D3748" stroke-width="1.5"/>
+  <text x="480" y="184" font-size="13" fill="#2D3748" font-weight="600" text-anchor="middle">01 BPE by hand</text>
+  <text x="480" y="204" font-size="11" fill="#6B7280" text-anchor="middle">a hand-built encoder</text>
+  <rect x="380" y="270" width="200" height="120" rx="12" fill="#4C51BF" fill-opacity="0.08" stroke="#4C51BF" stroke-width="1.5"/>
+  <text x="480" y="324" font-size="13" fill="#4C51BF" font-weight="600" text-anchor="middle">02 Three real tokenizers</text>
+  <text x="480" y="344" font-size="11" fill="#6B7280" text-anchor="middle">production tokenizers</text>
+  <g>
+    <circle cx="350" cy="150" r="15" fill="#2D3748"/>
+    <text x="350" y="155" font-size="13" fill="#FFFFFF" font-weight="600" text-anchor="middle">1</text>
+    <line x1="365" y1="150" x2="378" y2="180" stroke="#2D3748" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <rect x="30" y="130" width="300" height="90" rx="10" fill="#FFFFFF" stroke="#2D3748" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="48" y="156" font-size="13" fill="#2D3748" font-weight="600">01 BPE by hand</text>
+    <text x="48" y="178" font-size="11" fill="#374151">Build the merge table, encode, decode</text>
+    <text x="48" y="196" font-size="11" fill="#374151">Vocab vs length</text>
+  </g>
+  <g>
+    <circle cx="610" cy="290" r="15" fill="#4C51BF"/>
+    <text x="610" y="295" font-size="13" fill="#FFFFFF" font-weight="600" text-anchor="middle">2</text>
+    <line x1="595" y1="290" x2="582" y2="320" stroke="#4C51BF" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <rect x="630" y="270" width="300" height="90" rx="10" fill="#FFFFFF" stroke="#4C51BF" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="648" y="296" font-size="13" fill="#4C51BF" font-weight="600">02 Three real tokenizers</text>
+    <text x="648" y="318" font-size="11" fill="#374151">cl100k_base, GPT-2, SentencePiece</text>
+    <text x="648" y="336" font-size="11" fill="#374151">What gets expensive; mean / p95 / max budget</text>
+  </g>
+  <rect x="60" y="430" width="840" height="76" rx="8" fill="#FFF7ED" stroke="#F59E0B" stroke-width="1"/>
+  <text x="80" y="454" font-size="12" fill="#92400E" font-weight="600">One idea, two scales</text>
+  <text x="80" y="474" font-size="11" fill="#78350F">Notebook 01 builds the algorithm by hand so nothing is a black box.</text>
+  <text x="80" y="490" font-size="11" fill="#78350F">Notebook 02 measures real tokenizers on real text, so cost becomes a number instead of a guess.</text>
+
+</svg>

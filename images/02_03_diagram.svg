@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 810" font-family="'SF Pro Text', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <rect width="960" height="810" fill="#FAFAF9"/>
+  <rect x="40" y="28" width="6" height="34" fill="#F59E0B"/>
+  <text x="58" y="46" font-size="22" fill="#1A1A1A" font-weight="600">What gets expensive</text>
+  <text x="58" y="66" font-size="13" fill="#6B7280">Characters per token by kind of text: fewer characters per token means more tokens for the same text</text>
+  <rect x="10" y="90" width="940" height="700" rx="14" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <rect x="385.0" y="78" width="190" height="24" rx="6" fill="#1A1A1A"/>
+  <text x="480.0" y="95" font-size="12" fill="#FFFFFF" font-weight="600" text-anchor="middle">Characters per Token</text>
+  <rect x="360" y="130" width="240" height="120" rx="12" fill="#2D3748" fill-opacity="0.08" stroke="#2D3748" stroke-width="1.5"/>
+  <text x="380" y="156" font-size="13" fill="#2D3748" font-weight="600">English prose</text>
+  <text x="380" y="182" font-size="9" fill="#6B7280">cl100k</text>
+  <rect x="422" y="172" width="135.0" height="14" rx="4" fill="#2D3748"/>
+  <text x="563.0" y="183" font-size="11" fill="#2D3748" font-weight="600">4.5</text>
+  <text x="380" y="210" font-size="9" fill="#6B7280">GPT-2</text>
+  <rect x="422" y="200" width="135.0" height="14" rx="4" fill="#2D3748" fill-opacity="0.4"/>
+  <text x="563.0" y="211" font-size="11" fill="#2D3748" font-weight="600">4.5</text>
+  <rect x="360" y="270" width="240" height="120" rx="12" fill="#4C51BF" fill-opacity="0.08" stroke="#4C51BF" stroke-width="1.5"/>
+  <text x="380" y="296" font-size="13" fill="#4C51BF" font-weight="600">Python code</text>
+  <text x="380" y="322" font-size="9" fill="#6B7280">cl100k</text>
+  <rect x="422" y="312" width="99.0" height="14" rx="4" fill="#4C51BF"/>
+  <text x="527.0" y="323" font-size="11" fill="#4C51BF" font-weight="600">3.3</text>
+  <text x="380" y="350" font-size="9" fill="#6B7280">GPT-2</text>
+  <rect x="422" y="340" width="60.0" height="14" rx="4" fill="#4C51BF" fill-opacity="0.4"/>
+  <text x="488.0" y="351" font-size="11" fill="#4C51BF" font-weight="600">2.0</text>
+  <rect x="360" y="410" width="240" height="120" rx="12" fill="#6B46C1" fill-opacity="0.08" stroke="#6B46C1" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="380" y="436" font-size="13" fill="#6B46C1" font-weight="600">Numbers</text>
+  <text x="380" y="462" font-size="9" fill="#6B7280">cl100k</text>
+  <rect x="422" y="452" width="42.0" height="14" rx="4" fill="#6B46C1"/>
+  <text x="470.0" y="463" font-size="11" fill="#6B46C1" font-weight="600">1.4</text>
+  <text x="380" y="490" font-size="9" fill="#6B7280">GPT-2</text>
+  <rect x="422" y="480" width="54.0" height="14" rx="4" fill="#6B46C1" fill-opacity="0.4"/>
+  <text x="482.0" y="491" font-size="11" fill="#6B46C1" font-weight="600">1.8</text>
+  <rect x="360" y="550" width="240" height="120" rx="12" fill="#059669" fill-opacity="0.08" stroke="#059669" stroke-width="1.5"/>
+  <text x="380" y="576" font-size="13" fill="#059669" font-weight="600">Spanish</text>
+  <text x="380" y="602" font-size="9" fill="#6B7280">cl100k</text>
+  <rect x="422" y="592" width="111.0" height="14" rx="4" fill="#059669"/>
+  <text x="539.0" y="603" font-size="11" fill="#059669" font-weight="600">3.7</text>
+  <text x="380" y="630" font-size="9" fill="#6B7280">GPT-2</text>
+  <rect x="422" y="620" width="93.0" height="14" rx="4" fill="#059669" fill-opacity="0.4"/>
+  <text x="521.0" y="631" font-size="11" fill="#059669" font-weight="600">3.1</text>
+  <text x="480" y="688" font-size="10" fill="#6B7280" text-anchor="middle" font-style="italic">solid bar = cl100k_base, light bar = GPT-2</text>
+  <g>
+    <circle cx="330" cy="150" r="15" fill="#2D3748"/>
+    <text x="330" y="155" font-size="13" fill="#FFFFFF" font-weight="600" text-anchor="middle">1</text>
+    <line x1="345" y1="150" x2="358" y2="180" stroke="#2D3748" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <rect x="30" y="130" width="280" height="90" rx="10" fill="#FFFFFF" stroke="#2D3748" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="48" y="156" font-size="13" fill="#2D3748" font-weight="600">English prose: the baseline</text>
+    <text x="48" y="178" font-size="11" fill="#374151">4.5 chars per token at cl100k</text>
+    <text x="48" y="196" font-size="11" fill="#374151">GPT-2 also 4.5 on the 108-char sample</text>
+  </g>
+  <g>
+    <circle cx="630" cy="290" r="15" fill="#4C51BF"/>
+    <text x="630" y="295" font-size="13" fill="#FFFFFF" font-weight="600" text-anchor="middle">2</text>
+    <line x1="615" y1="290" x2="602" y2="320" stroke="#4C51BF" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <rect x="650" y="270" width="280" height="90" rx="10" fill="#FFFFFF" stroke="#4C51BF" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="668" y="296" font-size="13" fill="#4C51BF" font-weight="600">Python code: 3.3 vs 2.0</text>
+    <text x="668" y="318" font-size="11" fill="#374151">cl100k 3.3, GPT-2 only 2.0</text>
+    <text x="668" y="336" font-size="11" fill="#374151">Indentation is runs of spaces</text>
+  </g>
+  <g>
+    <circle cx="330" cy="430" r="15" fill="#6B46C1"/>
+    <text x="330" y="435" font-size="13" fill="#FFFFFF" font-weight="600" text-anchor="middle">3</text>
+    <line x1="345" y1="430" x2="358" y2="460" stroke="#6B46C1" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <rect x="30" y="410" width="280" height="90" rx="10" fill="#FFFFFF" stroke="#6B46C1" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="48" y="436" font-size="13" fill="#6B46C1" font-weight="600">Numbers: 1.4 vs 1.8</text>
+    <text x="48" y="458" font-size="11" fill="#374151">cl100k 1.4, GPT-2 1.8</text>
+    <text x="48" y="476" font-size="11" fill="#374151">Digits split one or three at a time</text>
+  </g>
+  <g>
+    <circle cx="630" cy="570" r="15" fill="#059669"/>
+    <text x="630" y="575" font-size="13" fill="#FFFFFF" font-weight="600" text-anchor="middle">4</text>
+    <line x1="615" y1="570" x2="602" y2="600" stroke="#059669" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <rect x="650" y="550" width="280" height="90" rx="10" fill="#FFFFFF" stroke="#059669" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="668" y="576" font-size="13" fill="#059669" font-weight="600">Spanish: 3.7 vs 3.1</text>
+    <text x="668" y="598" font-size="11" fill="#374151">cl100k 3.7, GPT-2 3.1</text>
+    <text x="668" y="616" font-size="11" fill="#374151">Accented words were rare in training</text>
+  </g>
+  <rect x="60" y="704" width="840" height="70" rx="8" fill="#FFF7ED" stroke="#F59E0B" stroke-width="1"/>
+  <text x="80" y="728" font-size="12" fill="#92400E" font-weight="600">Cost follows tokens, not characters</text>
+  <text x="80" y="748" font-size="11" fill="#78350F">Numbers cost about three times as many tokens per character as prose at cl100k:</text>
+  <text x="80" y="764" font-size="11" fill="#78350F">4.5 characters per token against 1.4 is a ratio of about 3.2.</text>
+
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 564" font-family="'SF Pro Text', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <rect width="900" height="564" fill="#FAFAF9"/>
+  <text x="450" y="40" font-size="22" fill="#1A1A1A" font-weight="600" text-anchor="middle">Three price quotes per million tokens</text>
+  <text x="450" y="62" font-size="13" fill="#6B7280" text-anchor="middle">Which way of comparing them can you trust?</text>
+  <g>
+    <rect x="290" y="90" width="320" height="84" rx="10" fill="#6B46C1" fill-opacity="0.08" stroke="#6B46C1" stroke-width="1.5"/>
+    <text x="450" y="118" font-size="14" fill="#6B46C1" font-weight="600" text-anchor="middle">Three price quotes per million tokens</text>
+    <text x="450" y="140" font-size="11" fill="#6B46C1" text-anchor="middle">Each vendor counts with its own tokenizer</text>
+    <text x="450" y="160" font-size="10" fill="#8B5CF6" text-anchor="middle" font-style="italic">How do you compare them?</text>
+  </g>
+  <line x1="450" y1="174" x2="450" y2="196" stroke="#9CA3AF" stroke-width="1.5"/>
+  <line x1="165" y1="196" x2="735" y2="196" stroke="#9CA3AF" stroke-width="1.5"/>
+  <line x1="165" y1="196" x2="165" y2="218" stroke="#9CA3AF" stroke-width="1.5"/>
+  <line x1="450" y1="196" x2="450" y2="218" stroke="#9CA3AF" stroke-width="1.5"/>
+  <line x1="735" y1="196" x2="735" y2="218" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="462" y="190" font-size="11" fill="#374151" font-weight="600">which method?</text>
+  <g>
+    <rect x="40" y="218" width="250" height="200" rx="10" fill="#FFFFFF" stroke="#B45309" stroke-width="1.5"/>
+    <rect x="40" y="218" width="250" height="32" rx="10" fill="#B45309"/>
+    <rect x="40" y="242" width="250" height="8" fill="#B45309"/>
+    <text x="165" y="239" font-size="13" fill="#FFFFFF" font-weight="600" text-anchor="middle">Compare directly</text>
+    <text x="165" y="274" font-size="12" fill="#B45309" font-weight="600" text-anchor="middle">Wrong unit</text>
+    <text x="58" y="300" font-size="11" fill="#374151">1. Read the three quoted prices</text>
+    <text x="58" y="317" font-size="11" fill="#374151">2. Pick the smallest number</text>
+    <text x="58" y="334" font-size="11" fill="#374151">3. A token is a different size for</text>
+    <text x="72" y="351" font-size="11" fill="#374151">each vendor, so the prices clash</text>
+    <rect x="58" y="384" width="214" height="22" rx="4" fill="#B45309" fill-opacity="0.1"/>
+    <text x="165" y="399" font-size="11" fill="#B45309" font-weight="600" text-anchor="middle">Not comparable</text>
+  </g>
+  <g>
+    <rect x="325" y="218" width="250" height="200" rx="10" fill="#FFFFFF" stroke="#059669" stroke-width="2.5"/>
+    <rect x="325" y="218" width="250" height="32" rx="10" fill="#059669"/>
+    <rect x="325" y="242" width="250" height="8" fill="#059669"/>
+    <text x="450" y="239" font-size="13" fill="#FFFFFF" font-weight="600" text-anchor="middle">Count with each tokenizer</text>
+    <text x="450" y="274" font-size="12" fill="#059669" font-weight="600" text-anchor="middle">Exact</text>
+    <text x="343" y="300" font-size="11" fill="#374151">1. Encode the same text with each</text>
+    <text x="357" y="317" font-size="11" fill="#374151">vendor's own tokenizer</text>
+    <text x="343" y="334" font-size="11" fill="#374151">2. tokens / 1,000,000 x price</text>
+    <text x="343" y="351" font-size="11" fill="#374151">3. Compare the three costs</text>
+    <rect x="343" y="384" width="214" height="22" rx="4" fill="#059669" fill-opacity="0.1"/>
+    <text x="450" y="399" font-size="11" fill="#059669" font-weight="600" text-anchor="middle">Use this one</text>
+  </g>
+  <g>
+    <rect x="610" y="218" width="250" height="200" rx="10" fill="#FFFFFF" stroke="#4C51BF" stroke-width="1.5"/>
+    <rect x="610" y="218" width="250" height="32" rx="10" fill="#4C51BF"/>
+    <rect x="610" y="242" width="250" height="8" fill="#4C51BF"/>
+    <text x="735" y="239" font-size="13" fill="#FFFFFF" font-weight="600" text-anchor="middle">Characters / 4</text>
+    <text x="735" y="274" font-size="12" fill="#4C51BF" font-weight="600" text-anchor="middle">Prose only</text>
+    <text x="628" y="300" font-size="11" fill="#374151">1. Count the characters in the text</text>
+    <text x="628" y="317" font-size="11" fill="#374151">2. Divide by four</text>
+    <text x="628" y="334" font-size="11" fill="#374151">3. A rough estimate that drifts for</text>
+    <text x="642" y="351" font-size="11" fill="#374151">code, numbers and other languages</text>
+    <rect x="628" y="384" width="214" height="22" rx="4" fill="#4C51BF" fill-opacity="0.1"/>
+    <text x="735" y="399" font-size="11" fill="#4C51BF" font-weight="600" text-anchor="middle">Approximate, English prose</text>
+  </g>
+  <rect x="60" y="444" width="780" height="100" rx="8" fill="#FFF7ED" stroke="#F59E0B" stroke-width="1"/>
+  <text x="80" y="468" font-size="12" fill="#92400E" font-weight="600">Trip hazards</text>
+  <text x="80" y="488" font-size="11" fill="#78350F">Per-million prices are not one unit: the same text becomes a different token count at each vendor.</text>
+  <text x="80" y="504" font-size="11" fill="#78350F">Characters / 4 comes from English prose (4.5 characters per token at cl100k); code and numbers run lower.</text>
+  <text x="80" y="520" font-size="10" fill="#B45309" font-style="italic">Price a real sample of your own text with each vendor's tokenizer.</text>
+
+</svg>

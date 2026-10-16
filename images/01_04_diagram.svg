@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" font-family="'SF Pro Text', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <rect width="900" height="640" fill="#FAFAF9"/>
+  <text x="450" y="40" font-size="22" fill="#1A1A1A" font-weight="600" text-anchor="middle">Vocabulary size against sequence length</text>
+  <text x="450" y="62" font-size="13" fill="#6B7280" text-anchor="middle">Every merge adds one vocabulary entry and shortens the sequence</text>
+  <text x="300" y="94" font-size="10" fill="#6B7280" font-style="italic">tokens needed for the same text (shorter is better)</text>
+  <g>
+    <rect x="60" y="104" width="780" height="84" rx="10" fill="#FFFFFF" stroke="#2D3748" stroke-width="1.5"/>
+    <rect x="60" y="104" width="6" height="84" rx="3" fill="#2D3748"/>
+    <text x="86" y="134" font-size="14" fill="#2D3748" font-weight="600">0 merges</text>
+    <text x="86" y="156" font-size="13" fill="#374151">vocab 28</text>
+    <text x="86" y="174" font-size="11" fill="#6B7280" font-style="italic">characters only</text>
+    <rect x="300" y="133" width="400" height="26" rx="5" fill="#2D3748"/>
+    <text x="712" y="151" font-size="13" fill="#2D3748" font-weight="600">213 tokens</text>
+  </g>
+  <g>
+    <rect x="60" y="204" width="780" height="84" rx="10" fill="#FFFFFF" stroke="#4C51BF" stroke-width="1.5"/>
+    <rect x="60" y="204" width="6" height="84" rx="3" fill="#4C51BF"/>
+    <text x="86" y="234" font-size="14" fill="#4C51BF" font-weight="600">100 merges</text>
+    <text x="86" y="256" font-size="13" fill="#374151">vocab 128</text>
+    <text x="86" y="274" font-size="11" fill="#6B7280" font-style="italic">a hundred merges in</text>
+    <rect x="300" y="233" width="192" height="26" rx="5" fill="#4C51BF"/>
+    <text x="504" y="251" font-size="13" fill="#4C51BF" font-weight="600">102 tokens</text>
+  </g>
+  <g>
+    <rect x="60" y="304" width="780" height="84" rx="10" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+    <rect x="60" y="304" width="6" height="84" rx="3" fill="#059669"/>
+    <text x="86" y="334" font-size="14" fill="#059669" font-weight="600">200 merges</text>
+    <text x="86" y="356" font-size="13" fill="#374151">vocab 228</text>
+    <text x="86" y="374" font-size="11" fill="#6B7280" font-style="italic">the full run</text>
+    <rect x="300" y="333" width="167" height="26" rx="5" fill="#059669"/>
+    <text x="479" y="351" font-size="13" fill="#059669" font-weight="600">89 tokens</text>
+  </g>
+  <text x="60" y="424" font-size="14" fill="#1A1A1A" font-weight="600">Where the savings come from</text>
+  <g>
+    <rect x="60" y="436" width="370" height="84" rx="10" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+    <rect x="60" y="436" width="6" height="84" rx="3" fill="#059669"/>
+    <text x="86" y="464" font-size="13" fill="#059669" font-weight="600">First 5 merges</text>
+    <text x="86" y="492" font-size="20" fill="#059669" font-weight="700">27 tokens saved</text>
+    <text x="86" y="510" font-size="11" fill="#6B7280" font-style="italic">about 5 tokens per merge</text>
+  </g>
+  <g>
+    <rect x="470" y="436" width="370" height="84" rx="10" fill="#FFFFFF" stroke="#2D3748" stroke-width="1.5"/>
+    <rect x="470" y="436" width="6" height="84" rx="3" fill="#2D3748"/>
+    <text x="496" y="464" font-size="13" fill="#2D3748" font-weight="600">Merges 195 to 200</text>
+    <text x="496" y="492" font-size="20" fill="#2D3748" font-weight="700">0 tokens saved</text>
+    <text x="496" y="510" font-size="11" fill="#6B7280" font-style="italic">the curve is flat</text>
+  </g>
+  <line x1="432" y1="478" x2="458" y2="478" stroke="#9CA3AF" stroke-width="1.5"/><polygon points="468,478 458,473 458,483" fill="#9CA3AF"/>
+  <text x="450" y="466" font-size="10" fill="#6B7280" text-anchor="middle" font-style="italic">flattens</text>
+  <rect x="60" y="540" width="780" height="72" rx="8" fill="#FFF7ED" stroke="#F59E0B" stroke-width="1"/>
+  <text x="80" y="564" font-size="12" fill="#92400E" font-weight="600">Key insight:</text>
+  <text x="80" y="584" font-size="11" fill="#78350F">Early merges shorten the sequence a lot; the last ones shorten it by nothing.</text>
+  <text x="80" y="600" font-size="11" fill="#78350F">Across 200 merges the vocabulary grew from 28 to 228 while the sequence fell from 213 to 89 tokens.</text>
+
+</svg>
