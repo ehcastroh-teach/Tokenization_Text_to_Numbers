@@ -1,0 +1,8 @@
+The quick brown fox jumps over the lazy dog. A tokenizer is a learned table.
+Common words stay whole, rarer ones get split into pieces the model has seen before.
+Models read numbers, not letters. You pay, wait and run out of context in tokens, not words.
+def count_tokens(text): return len(encode(text))
+for i in range(10): print(i, i * i, i ** 3)
+El modelo lee numeros, no letras. Pagas por token, no por palabra.
+La tokenizacion no es magia. Es una tabla aprendida de un corpus.
+2024-01-15, 3.14159, 1,000,000, 42, 0.001, 99.5 percent, 7 days, 1 to 3 days.

@@ -1,0 +1,162 @@
+#!/usr/bin/env python3
+"""Write three_real_tokenizers_homework.ipynb as a worksheet per homework-notebook-spec.md.
+
+Run from the repo root: python3 -I briefs/fill_02_homework.py
+The homework uses a different dataset from the lesson: four short texts of the learner's own
+choosing plus a fixed JSON payload, so the lesson code cannot be pasted in unchanged.
+"""
+import json
+from pathlib import Path
+
+NB = Path("three_real_tokenizers_homework.ipynb")
+
+
+def md(text):
+    return {"cell_type": "markdown", "metadata": {}, "source": text.splitlines(keepends=True)}
+
+
+def code(text):
+    return {"cell_type": "code", "metadata": {}, "source": text.splitlines(keepends=True), "outputs": [], "execution_count": None}
+
+
+cells = [
+    md("""# Three Real Tokenizers: One Sentence and Three Bills
+
+Count your own texts with two production tokenizers and a model you train, then write a one-paragraph budget note a manager could act on. The lesson used four fixed samples; here the samples are yours, plus one JSON payload that every tokenizer finds expensive.
+
+***Summary***
+1. [Load and train](#load-and-train)
+2. [Your own four texts](#your-own-four-texts)
+3. [The JSON payload](#the-json-payload)
+4. [A budget note](#a-budget-note)
+"""),
+    md("""***
+<a id='load-and-train'></a>
+## 1. Load and train
+
+Load `cl100k_base` and GPT-2, and train a SentencePiece model on a corpus you write yourself. The lesson's corpus was eight lines of mixed English, Spanish, code and numbers; yours must be at least twelve lines and must not reuse the lesson's sentences, so the vocabulary it learns is genuinely different.
+"""),
+    md("""**Q1 a) Load the two production tokenizers. Store the tiktoken encoding in `enc_tik` and the GPT-2 tokenizer in `tok_gpt2`.**
+
+*Hint:* Use [`tiktoken.get_encoding`](https://github.com/openai/tiktoken#readme) and [`Tokenizer.from_pretrained`](https://huggingface.co/docs/tokenizers/quicktour)
+"""),
+    code("""### YOUR CODE HERE ###
+import tiktoken
+from tokenizers import Tokenizer
+
+enc_tik = ...
+tok_gpt2 = ...
+"""),
+    md("""**Q1 b) Write a corpus of at least twelve lines to `data/my_corpus.txt`, train a SentencePiece BPE model with a vocabulary of 200 on it, and load it as `sp`. Print the vocabulary size.**
+
+*Hint:* Use [`SentencePieceTrainer.train`](https://github.com/google/sentencepiece#train-sentencepiece-model) with `model_type="bpe"`
+"""),
+    code("""### YOUR CODE HERE ###
+import sentencepiece as spm
+from pathlib import Path
+
+my_corpus = ...
+Path("data").mkdir(exist_ok=True)
+Path("data/my_corpus.txt").write_text(my_corpus)
+
+sp = ...
+"""),
+    md("""***
+<a id='your-own-four-texts'></a>
+## 2. Your own four texts
+
+The lesson's claim is that counts diverge most on code, numbers and non-English text. Test it on text you actually use.
+"""),
+    md("""**Q2 a) Build a dictionary `my_samples` with four entries named `"prose"`, `"code"`, `"numbers"` and `"other language"`, each at least 80 characters long and written or copied by you (not from the lesson). The `"other language"` entry must not be Spanish.**
+"""),
+    code("""### YOUR CODE HERE ###
+my_samples = {
+    "prose": ...,
+    "code": ...,
+    "numbers": ...,
+    "other language": ...,
+}
+"""),
+    md("""**Q2 b) Count each sample with each of the three tokenizers. Store the result in `my_counts`, a dictionary of dictionaries shaped like the lesson's `counts` (`my_counts[sample_name][tokenizer_name]`), and print it as a table with a characters-per-token column.**
+
+*Hint:* Use [`Encoding.ids`](https://huggingface.co/docs/tokenizers/api/encoding) for GPT-2 and [`SentencePieceProcessor.encode`](https://github.com/google/sentencepiece/blob/master/python/README.md) for your model
+"""),
+    code("""### YOUR CODE HERE ###
+my_counts = ...
+"""),
+    md("""**Q2 c) Which of your four samples has the lowest characters per token at `cl100k_base`, and is it the same sample at GPT-2? Answer in two sentences in the cell below, and name the tokenizer design choice from the lesson (base alphabet, space handling or vocabulary size) that explains the difference.**
+"""),
+    md("""*Your answer:*
+"""),
+    md("""***
+<a id='the-json-payload'></a>
+## 3. The JSON payload
+
+Structured data is where token bills surprise people. The payload below is fixed; do not change it.
+"""),
+    md("""**Q3 a) Count the payload with all three tokenizers and store the counts in `payload_counts` (keys: tokenizer names). Then build `payload_short`, the same payload with every 32-character hex id replaced by a short integer (`"1"`, `"2"`, ...), count it again into `payload_short_counts`, and print the saving as a percentage per tokenizer.**
+
+*Hint:* Use [`re.sub`](https://docs.python.org/3/library/re.html#re.sub) with a callback that numbers each new id
+"""),
+    code("""import json, re
+
+payload = json.dumps({  # don't change these lines
+    "customer": "f3a9c2e1b7d4458a9c0e2b6d1f7a3c58",
+    "orders": [
+        {"id": "0c7e1a9b4d2f4e6a8b1c3d5e7f9a0b2c", "sku": "A-100", "qty": 3, "total": 149.97},
+        {"id": "9e8d7c6b5a4f4e3d2c1b0a9f8e7d6c5b", "sku": "B-220", "qty": 1, "total": 1049.00},
+        {"id": "1a2b3c4d5e6f47a8b9c0d1e2f3a4b5c6", "sku": "A-100", "qty": 12, "total": 599.88},
+    ],
+    "agent": "7b6a5c4d3e2f41a0b9c8d7e6f5a4b3c2",
+})
+
+### YOUR CODE HERE ###
+payload_counts = ...
+payload_short = ...
+payload_short_counts = ...
+"""),
+    md("""**Q3 b) [OPTIONAL] Which tokenizer saves the most from the id swap, in absolute tokens, and why would you expect that from its base alphabet and digit handling? Two sentences.**
+"""),
+    md("""*Your answer:*
+"""),
+    md("""***
+<a id='a-budget-note'></a>
+## 4. A budget note
+
+Turn the counts into the three numbers a budget needs, then write the note.
+"""),
+    md("""**Q4 a) Reuse or rewrite the lesson's `count_budget(texts, count)` and run it on your four samples plus the original payload (five texts) for each tokenizer. Store the results in `budget`, a dictionary keyed by tokenizer name with values `{"n", "mean", "p95", "max"}`, and print it.**
+"""),
+    code("""### YOUR CODE HERE ###
+def count_budget(texts, count):
+    ...
+
+budget = ...
+"""),
+    md("""**Q4 b) Write a four-sentence budget note in the cell below for a manager choosing between the two production tokenizers' models at the same quoted price per token. It must state which model is cheaper on your inputs and by what factor (from the means), which input drives the difference, and what the max says about the context limit.**
+"""),
+    md("""*Your answer:*
+"""),
+    md("""***
+
+## Sources Consulted
+
+- [tiktoken README](https://github.com/openai/tiktoken). Retrieved 2026-10-16.
+- [Hugging Face tokenizers Quicktour](https://huggingface.co/docs/tokenizers/quicktour). Retrieved 2026-10-16.
+- [SentencePiece Python README](https://github.com/google/sentencepiece/blob/master/python/README.md). Retrieved 2026-10-16.
+"""),
+]
+
+nb = {
+    "cells": cells,
+    "metadata": {
+        "kernelspec": {"display_name": "Python 3 (ipykernel)", "language": "python", "name": "python3"},
+        "language_info": {"name": "python", "version": "3.12.13"},
+    },
+    "nbformat": 4,
+    "nbformat_minor": 5,
+}
+for i, c in enumerate(nb["cells"]):
+    c["id"] = f"hw02-{i:02d}"
+NB.write_text(json.dumps(nb, indent=1, ensure_ascii=False) + "\n")
+print(f"wrote {NB} with {len(cells)} cells")
