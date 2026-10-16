@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" font-family="'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6B46C1" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#6B46C1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="480" fill="url(#bg)"/>
+  <circle cx="900" cy="240" r="280" fill="url(#glow)"/>
+  <g opacity="0.06" stroke="#FFFFFF" stroke-width="0.5">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+  </g>
+  <g>
+    <text x="80" y="140" font-size="16" font-weight="500" fill="#F59E0B" letter-spacing="4">A TEACHING REPOSITORY</text>
+    <text x="80" y="210" font-size="64" font-weight="700" fill="#FFFFFF">Tokenization:</text>
+    <text x="80" y="278" font-size="64" font-weight="700" fill="#FFFFFF">text to <tspan fill="url(#accent)">numbers</tspan></text>
+    <text x="80" y="326" font-size="22" fill="#CBD5E1">From a hand-built encoder to three real tokenizers</text>
+    <g font-size="12" font-weight="600">
+      <rect x="80" y="360" width="90" height="26" rx="13" fill="#6B46C1" opacity="0.25" stroke="#6B46C1"/>
+      <text x="125.0" y="378" text-anchor="middle" fill="#C4B5FD">Python</text>
+      <rect x="180" y="360" width="90" height="26" rx="13" fill="#059669" opacity="0.25" stroke="#059669"/>
+      <text x="225.0" y="378" text-anchor="middle" fill="#6EE7B7">BPE</text>
+      <rect x="280" y="360" width="90" height="26" rx="13" fill="#0369A1" opacity="0.25" stroke="#0369A1"/>
+      <text x="325.0" y="378" text-anchor="middle" fill="#7DD3FC">tiktoken</text>
+      <rect x="380" y="360" width="119" height="26" rx="13" fill="#F59E0B" opacity="0.25" stroke="#F59E0B"/>
+      <text x="439.5" y="378" text-anchor="middle" fill="#FCD34D">SentencePiece</text>
+    </g>
+    <text x="80" y="430" font-size="13" fill="#94A3B8" font-style="italic">2 notebooks · homework · no API keys needed</text>
+  </g>
+  <g transform="translate(720, 50)">
+    <rect x="60" y="0" width="300" height="46" rx="23" fill="#1E293B" stroke="#94A3B8" stroke-width="1.5"/>
+    <text x="210" y="29" font-size="14" fill="#F1F5F9" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">Tokenization isn't magic.</text>
+    <line x1="210" y1="46" x2="210" y2="80" stroke="#F59E0B" stroke-width="2"/>
+    <circle cx="210" cy="63" r="4" fill="#F59E0B"/>
+    <rect x="100" y="80" width="220" height="52" rx="10" fill="#312E81" stroke="#818CF8" stroke-width="1.5"/>
+    <text x="210" y="105" font-size="14" fill="#E0E7FF" font-weight="700" text-anchor="middle">TOKENIZER</text>
+    <text x="210" y="122" font-size="10" fill="#A5B4FC" text-anchor="middle">text in, pieces out</text>
+    <line x1="210" y1="132" x2="210" y2="164" stroke="#10B981" stroke-width="2"/>
+    <circle cx="210" cy="148" r="4" fill="#10B981"/>
+    <rect x="18.0" y="164" width="60" height="34" rx="8" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+    <text x="48.0" y="186" font-size="11" fill="#D1FAE5" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">Token</text>
+    <rect x="86.0" y="164" width="78" height="34" rx="8" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+    <text x="125.0" y="186" font-size="11" fill="#D1FAE5" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">ization</text>
+    <rect x="172.0" y="164" width="56" height="34" rx="8" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+    <text x="200.0" y="186" font-size="11" fill="#D1FAE5" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">isn</text>
+    <rect x="236.0" y="164" width="44" height="34" rx="8" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+    <text x="258.0" y="186" font-size="11" fill="#D1FAE5" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">'t</text>
+    <rect x="288.0" y="164" width="72" height="34" rx="8" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+    <text x="324.0" y="186" font-size="11" fill="#D1FAE5" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">magic</text>
+    <rect x="368.0" y="164" width="34" height="34" rx="8" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+    <text x="385.0" y="186" font-size="11" fill="#D1FAE5" font-weight="600" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">.</text>
+    <line x1="48.0" y1="198" x2="48.0" y2="226" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="18.0" y="226" width="60" height="34" rx="8" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="48.0" y="248" font-size="13" fill="#FEF3C7" font-weight="700" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">#</text>
+    <line x1="125.0" y1="198" x2="125.0" y2="226" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="86.0" y="226" width="78" height="34" rx="8" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="125.0" y="248" font-size="13" fill="#FEF3C7" font-weight="700" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">#</text>
+    <line x1="200.0" y1="198" x2="200.0" y2="226" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="172.0" y="226" width="56" height="34" rx="8" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="200.0" y="248" font-size="13" fill="#FEF3C7" font-weight="700" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">#</text>
+    <line x1="258.0" y1="198" x2="258.0" y2="226" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="236.0" y="226" width="44" height="34" rx="8" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="258.0" y="248" font-size="13" fill="#FEF3C7" font-weight="700" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">#</text>
+    <line x1="324.0" y1="198" x2="324.0" y2="226" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="288.0" y="226" width="72" height="34" rx="8" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="324.0" y="248" font-size="13" fill="#FEF3C7" font-weight="700" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">#</text>
+    <line x1="385.0" y1="198" x2="385.0" y2="226" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="368.0" y="226" width="34" height="34" rx="8" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="385.0" y="248" font-size="13" fill="#FEF3C7" font-weight="700" text-anchor="middle" font-family="'SF Mono', Menlo, Consolas, monospace">#</text>
+    <text x="210" y="282" font-size="11" fill="#94A3B8" text-anchor="middle" font-style="italic">one integer id per piece</text>
+    <line x1="210" y1="292" x2="210" y2="310" stroke="#A78BFA" stroke-width="2" stroke-dasharray="4,4"/>
+    <rect x="110" y="310" width="200" height="52" rx="26" fill="#4C1D95" stroke="#C4B5FD" stroke-width="1.5"/>
+    <text x="210" y="334" font-size="13" fill="#EDE9FE" font-weight="700" text-anchor="middle">Language model</text>
+    <text x="210" y="351" font-size="10" fill="#C4B5FD" text-anchor="middle">reads numbers, never text</text>
+  </g>
+  <g>
+    <rect x="80" y="446" width="180" height="20" rx="10" fill="#0F172A" stroke="#F59E0B" stroke-width="1"/>
+    <text x="170" y="460" text-anchor="middle" font-size="11" font-weight="600" fill="#F59E0B">ehcastroh-teach · applied AI</text>
+  </g>
+</svg>

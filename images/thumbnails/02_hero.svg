@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" font-family="'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6B46C1" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#6B46C1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="480" fill="url(#bg)"/>
+  <circle cx="900" cy="240" r="280" fill="url(#glow)"/>
+  <g opacity="0.06" stroke="#FFFFFF" stroke-width="0.5">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+  </g>
+  <g>
+    <text x="80" y="140" font-size="16" font-weight="500" fill="#F59E0B" letter-spacing="4">A TEACHING REPOSITORY</text>
+    <text x="80" y="210" font-size="64" font-weight="700" fill="#FFFFFF">Three real</text>
+    <text x="80" y="278" font-size="64" font-weight="700" fill="#FFFFFF"><tspan fill="url(#accent)">tokenizers</tspan></text>
+    <text x="80" y="326" font-size="22" fill="#CBD5E1">cl100k_base, GPT-2 and SentencePiece, side by side</text>
+    <g font-size="12" font-weight="600">
+      <rect x="80" y="360" width="90" height="26" rx="13" fill="#6B46C1" opacity="0.25" stroke="#6B46C1"/>
+      <text x="125.0" y="378" text-anchor="middle" fill="#C4B5FD">tiktoken</text>
+      <rect x="180" y="360" width="98" height="26" rx="13" fill="#059669" opacity="0.25" stroke="#059669"/>
+      <text x="229.0" y="378" text-anchor="middle" fill="#6EE7B7">tokenizers</text>
+      <rect x="288" y="360" width="119" height="26" rx="13" fill="#0369A1" opacity="0.25" stroke="#0369A1"/>
+      <text x="347.5" y="378" text-anchor="middle" fill="#7DD3FC">SentencePiece</text>
+      <rect x="417" y="360" width="90" height="26" rx="13" fill="#F59E0B" opacity="0.25" stroke="#F59E0B"/>
+      <text x="462.0" y="378" text-anchor="middle" fill="#FCD34D">Budgets</text>
+    </g>
+    <text x="80" y="430" font-size="13" fill="#94A3B8" font-style="italic">Notebook 02 · same text · three cuts · cost per workload</text>
+  </g>
+  <g transform="translate(720, 70)">
+    <text x="0" y="0" font-size="11" fill="#94A3B8" font-weight="600" text-anchor="start">THE SAME SENTENCE</text>
+    <text x="0" y="34" font-size="22" fill="#F1F5F9" font-weight="600" text-anchor="start" font-family="'SF Mono', Menlo, Consolas, monospace">Tokenization isn't magic.</text>
+    <text x="0" y="100" font-size="13" fill="#C7D2FE" font-weight="700" text-anchor="start">cl100k_base</text>
+    <text x="360" y="100" font-size="13" fill="#C7D2FE" font-weight="700" text-anchor="end">6 tokens</text>
+    <rect x="0" y="110" width="58" height="30" rx="5" fill="#312E81" stroke="#818CF8" stroke-width="1.5"/>
+    <rect x="60" y="110" width="82" height="30" rx="5" fill="#312E81" stroke="#818CF8" stroke-width="1.5"/>
+    <rect x="144" y="110" width="46" height="30" rx="5" fill="#312E81" stroke="#818CF8" stroke-width="1.5"/>
+    <rect x="192" y="110" width="22" height="30" rx="5" fill="#312E81" stroke="#818CF8" stroke-width="1.5"/>
+    <rect x="216" y="110" width="70" height="30" rx="5" fill="#312E81" stroke="#818CF8" stroke-width="1.5"/>
+    <rect x="288" y="110" width="10" height="30" rx="5" fill="#312E81" stroke="#818CF8" stroke-width="1.5"/>
+    <text x="0" y="180" font-size="13" fill="#6EE7B7" font-weight="700" text-anchor="start">GPT-2</text>
+    <text x="360" y="180" font-size="13" fill="#6EE7B7" font-weight="700" text-anchor="end">6 tokens</text>
+    <rect x="0" y="190" width="58" height="30" rx="5" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+    <rect x="60" y="190" width="82" height="30" rx="5" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+    <rect x="144" y="190" width="46" height="30" rx="5" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+    <rect x="192" y="190" width="22" height="30" rx="5" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+    <rect x="216" y="190" width="70" height="30" rx="5" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+    <rect x="288" y="190" width="10" height="30" rx="5" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+    <text x="0" y="260" font-size="13" fill="#FCD34D" font-weight="700" text-anchor="start">SentencePiece (300 pieces)</text>
+    <text x="360" y="260" font-size="13" fill="#FCD34D" font-weight="700" text-anchor="end">16 tokens</text>
+    <rect x="0" y="270" width="17" height="30" rx="5" fill="#451A03" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="19" y="270" width="17" height="30" rx="5" fill="#451A03" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="38" y="270" width="17" height="30" rx="5" fill="#451A03" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="57" y="270" width="17" height="30" rx="5" fill="#451A03" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="76" y="270" width="17" height="30" rx="5" fill="#451A03" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="95" y="270" width="17" height="30" rx="5" fill="#451A03" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="114" y="270" width="17" height="30" rx="5" fill="#451A03" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="133" y="270" width="17" height="30" rx="5" fill="#451A03" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="152" y="270" width="17" height="30" rx="5" fill="#451A03" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="171" y="270" width="17" height="30" rx="5" fill="#451A03" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="190" y="270" width="17" height="30" rx="5" fill="#451A03" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="209" y="270" width="17" height="30" rx="5" fill="#451A03" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="228" y="270" width="17" height="30" rx="5" fill="#451A03" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="247" y="270" width="17" height="30" rx="5" fill="#451A03" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="266" y="270" width="17" height="30" rx="5" fill="#451A03" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="285" y="270" width="17" height="30" rx="5" fill="#451A03" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="0" y="332" font-size="12" fill="#94A3B8" text-anchor="start" font-style="italic">Same text, different cuts, different costs.</text>
+  </g>
+  <g>
+    <rect x="80" y="446" width="180" height="20" rx="10" fill="#0F172A" stroke="#F59E0B" stroke-width="1"/>
+    <text x="170" y="460" text-anchor="middle" font-size="11" font-weight="600" fill="#F59E0B">ehcastroh-teach · applied AI</text>
+  </g>
+</svg>
