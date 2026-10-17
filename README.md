@@ -30,11 +30,11 @@ uv sync
 uv run jupyter lab
 ```
 
-These two commands are the same on Windows, macOS and Linux; `uv` downloads the pinned Python itself, so nothing else needs installing first. If you prefer to activate the environment instead of prefixing `uv run`, that is `.venv\Scripts\activate` on Windows and `source .venv/bin/activate` elsewhere. No API keys are needed anywhere in this repo, so there is nothing to put in a `.env` file.
+These two commands are the same on Windows, macOS and Linux; `uv` downloads the pinned Python itself, so nothing else needs installing first. No API keys are needed anywhere in this repo, so there is nothing to put in a `.env` file.
 
 If you already use Nix (Linux and macOS only), `nix develop` enters a shell with the same Python and runs `uv sync` for you; then `uv run jupyter lab` as above.
 
-Open `orientation.ipynb` first. Its second Part checks that your environment is complete. The first call to tiktoken downloads one vocabulary file (`cl100k_base`), so the first run needs internet access; the file is cached afterwards.
+Open `orientation.ipynb` first. Its second Part checks that your environment is complete. Two cells download on first run and are cached afterwards, so the first pass through `02_three_real_tokenizers.ipynb` needs internet access: tiktoken fetches its `cl100k_base` vocabulary, and Hugging Face `tokenizers` fetches the GPT-2 tokenizer from the Hub.
 
 ## Key Concepts Glossary
 
