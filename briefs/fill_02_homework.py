@@ -57,7 +57,7 @@ from pathlib import Path
 
 my_corpus = ...
 Path("data").mkdir(exist_ok=True)
-Path("data/my_corpus.txt").write_text(my_corpus)
+Path("data/my_corpus.txt").write_text(my_corpus, encoding="utf-8")
 
 sp = ...
 """),
@@ -158,5 +158,5 @@ nb = {
 }
 for i, c in enumerate(nb["cells"]):
     c["id"] = f"hw02-{i:02d}"
-NB.write_text(json.dumps(nb, indent=1, ensure_ascii=False) + "\n")
+NB.write_text(json.dumps(nb, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 print(f"wrote {NB} with {len(cells)} cells")

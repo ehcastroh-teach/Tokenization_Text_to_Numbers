@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 
 NB = Path("02_three_real_tokenizers.ipynb")
-nb = json.loads(NB.read_text())
+nb = json.loads(NB.read_text(encoding="utf-8"))
 cells = nb["cells"]
 
 
@@ -140,7 +140,7 @@ El modelo lee numeros, no letras. Pagas por token, no por palabra.
 La tokenizacion no es magia. Es una tabla aprendida de un corpus.
 2024-01-15, 3.14159, 1,000,000, 42, 0.001, 99.5 percent, 7 days, 1 to 3 days.
 '''
-Path("data/corpus.txt").write_text(corpus)
+Path("data/corpus.txt").write_text(corpus, encoding="utf-8")
 spm.SentencePieceTrainer.train(
     input="data/corpus.txt", model_prefix="data/spm_small", vocab_size=300,  # 300 is close to the most this corpus supports
     model_type="bpe", character_coverage=1.0, minloglevel=2,
@@ -402,5 +402,5 @@ Claim strength: the mechanics (byte-level alphabet, space attachment, vocabulary
 for c in cells:
     if isinstance(c["source"], str):
         c["source"] = c["source"].splitlines(keepends=True)
-NB.write_text(json.dumps(nb, indent=1, ensure_ascii=False) + "\n")
+NB.write_text(json.dumps(nb, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 print(f"wrote {NB} with {len(cells)} cells")
